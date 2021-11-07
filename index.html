@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manchester City Football Club</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+        body {max-width: 950px;
+            margin: 0 auto;}
+        .header {
+            background-color: #87cefa;
+            text-align: none;
+            padding: 20px;
+            
+        }
+        .nav {
+            overflow: hidden;
+            background-color: #00008B;
+        }
+        .nav a {
+            float: left;
+            display: inline;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none; 
+        }
+        .nav a:hover {
+            background-color: #ddd;
+            color: #00008B;
+        }
+        section{
+            display: flex;
+        }
+        article.main{
+            flex: 3;
+        }
+        aside.right{
+            flex: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1> 좋아하는 축구선수</h1>
+    </div>
+    <div class="nav">
+        <a href="./1.html" >대회 기록</a>
+        <a href="./2.html" >개인 수상</a>
+        <a href="./3.html" >평가</a>
+    </div>
+    <section class="w3-container">
+     <article class="main">
+     <h1>HIGHLIGHT</h1>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/O94jSkPMEe4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <h2>PHOTO</h2>
+     <div class="w3-card-4" style="width:50%">
+        <img src="img_1.jpg" alt="Alps" style="width:100%">
+        <div class="w3-container w3-center">
+          <p>Kevin De Bruyne</p>
+        </div>
+     </div>
+     <h2>SUMMARY</h2>
+      <p>벨기에 국적의 맨체스터 시티 FC 소속 축구선수.</p>
+      <p>VfL 볼프스부르크에서 기량을 만개한 뒤 맨체스터 시티로 이적하여 프리미어 리그 3회 우승을 이끌었고 벨기에 대표팀에서도 2018년 월드컵 3위 등극에 기여했다.</p>
+     <div id="profile">
+        <h2>PROFILE</h2>
+        <table class="w3-table w3-striped w3-bordered"> 
+            <tr class="w3-indigo">
+                <th>이름</th>
+                <td>케빈 더브라위너</td>
+            </tr>
+            <tr>
+                <th>출생</th>
+                <th>1990년 6월 28일</th>
+            </tr>
+            <tr>
+                <th>체격</th>
+                <td>181cm 76kg</td>
+            </tr>
+            <tr>
+                <th>주발</th>
+                <th>양발</th>
+            </tr>
+            <tr>
+                <th>포지션</th>
+                <th>공격형 미드필더</th>
+            </tr>
+            <tr>
+                <th>소속</th>
+                <th>맨채스터 시티 (2015~)</th>
+            </tr>
+        </table>
+     </div>
+    </article>
+    <aside class="right">
+        <div id="login">
+            <h2>Login</h2>
+            <form>
+                <label for="ID">아이디:</label><br>
+                <input type="id" name="id" id="id_" ><br>
+                <label for="password">비밀번호:</label><br>
+                <input type="password" name="pass" id="pass_" >
+                <button id="submit">로그인</button>
+            </form>
+        </div>
+        <script> //JS
+            document.getElementById('submit').onclick = function() {
+                var ID = document.getElementById('id_').value;
+                var pass = document.getElementById('pass_').value;
+                if (ID === "admin" && pass === "1234") {
+                    alert("로그인이 되었습니다.");
+                }
+                else {
+                    alert("로그인이 실패했습니다.");
+                }
+            }
+        </script>    
+    </aside>
+    </section>    
+    <footer class="w3-gray w3-text-white">
+        facebook : <a href="https://m.facebook.com/DeBruyneOfficial" target="_blank"> <i class="fa fa-facebook-square" style="font-size: 20px;"></i> </a>  <br>   
+        instagram : <a href="https://www.instagram.com/kevindebruyne/" target="_blank"> <i class="fa fa-instagram" style="font-size: 20px;"></i> </a> <br>
+        twitter : <a href="https://twitter.com/DeBruyneKev" target="_blank"> <i class="fa fa-twitter" style="font-size: 20px;"></i> </a>
+    </footer>
+</body>
+</html>
