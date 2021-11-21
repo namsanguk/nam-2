@@ -42,6 +42,24 @@
             flex: 1;
         }
     </style>
+    <script>
+        function funAppend1(){
+            const list = document.createElement("li");
+            const work = document.getElementById("text").value;
+            const node = document.createTextNode(work);
+            list.appendChild(node);
+            const ele = document.getElementById("ul1");
+            ele.appendChild(list);
+        }
+        function funAppend2(){
+            const list = document.createElement("li");
+            const work = document.getElementById("text").value;
+            const node = document.createTextNode(work);
+            list.appendChild(node);
+            const ele = document.getElementById("ul2");
+            ele.appendChild(list);
+        }
+    </script>
 </head>
 <body>
     <div class="header">
@@ -52,6 +70,12 @@
         <a href="./2.html" >개인 수상</a>
         <a href="./3.html" >평가</a>
     </div>
+    <ul id="ol1">
+        <li>제주도여행</li>
+        <li>사진배우기</li>
+        <li>영어공부하기</li>
+        <li>대회활동하기</li>
+    </ul>
     <li>KRC 행크 (2008 ~ 2012)</li>
     <ul>
         <li>벨기에 퍼스트 디비전 A : 2010-11</li>
@@ -64,17 +88,21 @@
         <li>DFL-슈퍼컵 : 2015</li>
     </ul>
     <li>맨체스터 시티 FC (2015 ~)</li>
-    <ul>
+    <ul id="ul1">
         <li>프리미어 리그 : 2017-18, 2018-19, 2020-21</li>
         <li>FA컵 : 2018-19</li>
         <li>EFL컵 : 2015-16, 2017-18, 2018-19, 2019-20, 2020-21</li>
         <li>FA 커뮤니티 실드 : 2019</li>
         <li>UEFA 챔피언스 리그 준우승 : 2020-21</li>
     </ul>
+    <input id ="text" type="text" maxlength="40" ><br>
+    <button onclick="funAppend1();"> 내용추가</button>
     <li>벨기에 축구 국가대표팀</li>
-    <ul>
+    <ul id="ul2">
         <li>FIFA 월트컵 3위 : 2018</li>
     </ul>
+    <input id ="text" type="text" maxlength="40" ><br>
+    <button onclick="funAppend2();"> 내용추가</button>
     <footer class="w3-gray w3-text-white">
         facebook : <a href="https://m.facebook.com/DeBruyneOfficial" target="_blank"> <i class="fa fa-facebook-square" style="font-size: 20px;"></i> </a>  <br>   
         instagram : <a href="https://www.instagram.com/kevindebruyne/" target="_blank"> <i class="fa fa-instagram" style="font-size: 20px;"></i> </a> <br>

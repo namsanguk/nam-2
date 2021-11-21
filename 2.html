@@ -42,6 +42,16 @@
             flex: 1;
         }
     </style>
+    <script>
+            function funAppend(){
+            const list = document.createElement("li");
+            const work = document.getElementById("text").value;
+            const node = document.createTextNode(work);
+            list.appendChild(node);
+            const ele = document.getElementById("ul1");
+            ele.appendChild(list);
+        }
+    </script>
 </head>
 <body>
     <div class="header">
@@ -52,7 +62,7 @@
         <a href="./1.html" >대회 기록</a>
         <a href="./3.html" >평가</a>
     </div>
-    <ul>
+    <ul id="ul1">
         <li>FIFA FIFPro 월드 XI : 2020 </li>
         <li>UEFA 올해의 선수 2위 : 2019-20, 2020-21</li>
         <li>UEFA 올해의 미드필더 : 2019-20</li>
@@ -73,6 +83,8 @@
         <li>IFFHS 10년의 UEFA 남자팀 : 2011-2020</li>
         <li>프랑스 풋볼 월드 XI : 2015</li>
     </ul>
+    <input id ="text" type="text" maxlength="40" ><br>
+    <button onclick="funAppend();">추가</button>
     <footer class="w3-gray w3-text-white">
         facebook : <a href="https://m.facebook.com/DeBruyneOfficial" target="_blank"> <i class="fa fa-facebook-square" style="font-size: 20px;"></i> </a>  <br>   
         instagram : <a href="https://www.instagram.com/kevindebruyne/" target="_blank"> <i class="fa fa-instagram" style="font-size: 20px;"></i> </a> <br>
