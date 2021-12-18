@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>퀴즈</title>
+    <style>
+        body {max-width: 950px;
+            margin: 0 auto;}
+        .header {
+            background-color: #87cefa;
+            text-align: none;
+            padding: 20px;
+            
+        }
+        .nav {
+            overflow: hidden;
+            background-color: #00008B;
+        }
+        .nav a {
+            float: left;
+            display: inline;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none; 
+        }
+        .nav a:hover {
+            background-color: #ddd;
+            color: #00008B;
+        }
+        section{
+            display: flex;
+        }
+        article.main{
+            flex: 3;
+        }
+        aside.right{
+            flex: 1;
+        }
+    </style>
+    <script>
+        var quize1 = "3"
+        function guess1(){
+            var result1="";
+        var number = parseInt(document.getElementById("user1").value);
+        
+        if(number==quize1) result1 = "정답입니다.";
+        else if (number < quize1) result1 = "낮습니다.";
+        else result1 = "높습니다.";
+        
+        document.getElementById("result1").value = result1;
+        return true;
+        }
+
+        var quize2 = "2015"
+        function guess2(){
+            var result2="";
+        var number = parseInt(document.getElementById("user2").value);
+        
+        if(number==quize2) result2 = "정답입니다."
+        else if (number < quize2) result2 = "낮습니다.";
+        else result2 = "높습니다.";
+        
+        document.getElementById("result2").value = result2;
+        return true;
+        }
+
+        var quize3 = "2012"
+        function guess3(){
+            var result3="";
+        var number = parseInt(document.getElementById("user3").value);
+        
+        if(number==quize3) result3 = "정답입니다."
+        else if (number < quize3) result3 = "낮습니다.";
+        else result3 = "높습니다.";
+        
+        document.getElementById("result3").value = result3;
+        return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>퀴즈</h1>
+    </div>
+    <div class="nav">
+        <a href="./index.html" >홈</a>
+        <a href="./1.html">대회 기록</a>
+        <a href="./2.html">개인 수상</a>
+        <a href="./3.html">평가</a>
+    </div>
+    <h3>Q1. 벨기에 대표팀에서 2018년도에 몇위를 했는가?</h3>
+    <form>
+     정답 : <input type="text" id="user1" size="5">
+            <input type="button" value="확인" onclick="guess1();">
+     힌트 : <input type="text" id="result1" size="15">
+    </form>
+    <h3>Q2. 맨체스터시티에 몇년도에 이적했는가?</h3>
+    <form>
+        정답 : <input type="text" id="user2" size="5">
+               <input type="button" value="확인" onclick="guess2();">
+        힌트 : <input type="text" id="result2" size="15">
+    </form>
+    <h3>Q3. KRC행크에는 몇년도까지 있었는가?</h3>
+    <form>
+        정답 : <input type="text" id="user3" size="5">
+               <input type="button" value="확인" onclick="guess3();">
+        힌트 : <input type="text" id="result3" size="15">
+    </form>
+
+    <footer class="w3-gray w3-text-white">
+        facebook : <a href="https://m.facebook.com/DeBruyneOfficial" target="_blank"> <i class="fa fa-facebook-square" style="font-size: 20px;"></i> </a>  <br>   
+        instagram : <a href="https://www.instagram.com/kevindebruyne/" target="_blank"> <i class="fa fa-instagram" style="font-size: 20px;"></i> </a> <br>
+        twitter : <a href="https://twitter.com/DeBruyneKev" target="_blank"> <i class="fa fa-twitter" style="font-size: 20px;"></i> </a>
+    </footer>
+    
+</body>
+</html>
